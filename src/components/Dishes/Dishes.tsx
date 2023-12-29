@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
-import DishItem from './DishItem';
-import {useAppDispatch, useAppSelector} from '../../app/hooks';
 import {selectDeleteDishLoading, selectDishes, selectFetchDishLoading} from '../../store/dishes/dishesSlice';
-import Spinner from '../Spinner/Spinner';
 import {deleteDish, fetchDishes} from '../../store/dishes/dishesThunks';
+import {useAppDispatch, useAppSelector} from '../../app/hooks';
+import DishItem from './DishItem';
+import Spinner from '../Spinner/Spinner';
 
 const Dishes: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -27,7 +27,7 @@ const Dishes: React.FC = () => {
         <DishItem
           key={dish.id}
           dish={dish}
-          deleteLoading = {deleteLoading}
+          deleteLoading={deleteLoading}
           onDelete={() => removeDish(dish.id)}
         />
       ))}

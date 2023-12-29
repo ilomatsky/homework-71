@@ -1,7 +1,7 @@
-import {ApiOrders, Order} from '../../types';
 import {useCallback, useEffect, useState} from 'react';
-import axiosApi from '../../axiosApi';
 import Spinner from '../../components/Spinner/Spinner';
+import axiosApi from '../../axiosApi';
+import {ApiOrders, Order} from '../../types';
 
 const Orders = () => {
   const [orders, setOrders] = useState<Order[]>([]);
