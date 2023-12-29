@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import DishForm from '../../components/DishForm/DishForm';
 import {ApiDish} from '../../types';
+import DishForm from '../../components/DishForm/DishForm';
 import {useNavigate} from 'react-router-dom';
 import axiosApi from '../../axiosApi';
 
